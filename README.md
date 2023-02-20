@@ -127,6 +127,8 @@ keywords:
 - `WhereClause{}` - a struct to constructing filter statements in Horde. It has 3 properties: `Column`, `Condition`, and `Value`
 - `Join()` - a method to retrieve the relationship data of the parent model. This will require the Relationship Name defined for the model and also a `WhereClause{}`
 for filtering the related model.
-- `Get()` - get the data. will return a map[string]interface{} for `FindOne()` and a []map[string]interface{} for `FindAll()`.
+   The Join() can go deep too. Just use it as `Join("SavingsAccounts.SavingsTransactions.TransactionDetails", []WhereClause{})`
+   or you can chain it with multiple joins i.e: `Join(...).Join(...).Get(mockDb)`
+- `Get()` - get the data. will return a map[string]interface{} for `FindOne()` and a []map[string]interface{} for `FindAll()`. It will require the ozzo-db connection as parameter.
 
 It has Save() method too for Upsert() operations (like in other ORM). I will document it later ;)
