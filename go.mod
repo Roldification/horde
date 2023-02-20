@@ -1,4 +1,4 @@
-module example.com/horde
+module github.com/Roldification/horde
 
 go 1.18
 
