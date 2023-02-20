@@ -4,6 +4,7 @@
 ## Summary
 
 - [Description](#description)
+- [Installation](#installation)
 - [Getting Started](#getting-started)
 
 
@@ -15,6 +16,12 @@ This uses `ozzo-dbx` for query execution under the hood and for the meantime onl
 It used ozzo-dbx because I thought ozzo-dbx could provide what we wanted but it cannot, so what I did was I wrote Horde on top of it because I already had it.
 
 I might add support for MySQL later.
+
+## Installation
+```
+go get github.com/Roldification/horde
+```
+
 
 ## Getting Started
 
