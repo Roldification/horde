@@ -9,7 +9,7 @@
 
 
 ## Description
-Looks like an ORM. Almost an ORM. Except that it's not. Horde is an Almost-ORM package I wrote for myself and my team at work. This will help us
+Looks like an ORM. Almost an ORM. Except that it's not. Horde is a dead simple Almost-ORM package I wrote for myself and my team at work. This will help us
 fetch SQL results just like in a decent ORM way (i.e: nested json result based on the declared relationship, etc).
 This uses `ozzo-dbx` for query execution under the hood and for the meantime only works for Microsoft SQL Server >= 2012.
 It used ozzo-dbx because I thought ozzo-dbx could provide what we wanted but it cannot, so what I did was I wrote Horde on top of it because I already had it.
@@ -128,3 +128,5 @@ keywords:
 - `Join()` - a method to retrieve the relationship data of the parent model. This will require the Relationship Name defined for the model and also a `WhereClause{}`
 for filtering the related model.
 - `Get()` - get the data. will return a map[string]interface{} for `FindOne()` and a []map[string]interface{} for `FindAll()`.
+
+It has Save() method too for Upsert() operations (like in other ORM). I will document it later ;)
